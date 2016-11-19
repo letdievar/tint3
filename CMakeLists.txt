@@ -11,10 +11,16 @@ endif (NOT X11_FOUND)
 
 # Bring the headers, such as xlibCtrl.h into the project
 include_directories( include
-										 ${X11_INCLUDE_DIRS} )
+					 include/Model
+					 include/Controller
+					 include/View
+					 ${X11_INCLUDE_DIRS} )
 link_directories( ${X11_LIBRARY_DIRS} )
 
-file(GLOB SOURCES "src/*.cpp")
+file(GLOB SOURCES "src/*.cpp"
+									"src/Model/*.cpp" 
+									"src/Controller/*.cpp" 
+									"src/View/*.cpp")
 
 add_executable(tint3 ${SOURCES})
 

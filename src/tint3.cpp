@@ -1,21 +1,19 @@
 #include <unistd.h>
 
-#include "xlibCtrl.h"
-
-using namespace xlibCtrl;
+#include "Controller/DisplayCtrl.h"
 
 int main()
 {
 	std::string empty_string ("");
 
 	// Open display
-	DisplayCtrl * d  = new DisplayCtrl(empty_string);
+	Controller::DisplayCtrl * d  = new Controller::DisplayCtrl(empty_string);
 	
 	// Create the window
 	Window w = XCreateWindow(
 			d->getDisplay(), 
 			DefaultRootWindow(d->getDisplay()),
-			0, 0, 200, 100, 0,
+			0, 0, d->getDisplayWidth(), 20, 0,
 			CopyFromParent, CopyFromParent, CopyFromParent,
 			0, 0);
 
