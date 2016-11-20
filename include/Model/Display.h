@@ -18,8 +18,8 @@ namespace Model
 			CDisplay( std::string name );
 			~CDisplay( );
 
-			Display * getDisplay();
-			int getDisplayWidth();
+			Display * GetDisplay();
+			int GetDisplayWidth();
 	};
 }
 

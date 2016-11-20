@@ -37,7 +37,7 @@ CDisplay::~CDisplay()
  * CDisplay::getDisplay()
  * Returns the pointer to the opened display
  */
-Display * CDisplay::getDisplay()
+Display * CDisplay::GetDisplay()
 {
 	return _display;
 }
@@ -46,7 +46,7 @@ Display * CDisplay::getDisplay()
  * CDisplay::getDisplayWidth()
  * Returns the width of the opened display
  */
-int CDisplay::getDisplayWidth()
+int CDisplay::GetDisplayWidth()
 {
 	return _display_width;
 }
