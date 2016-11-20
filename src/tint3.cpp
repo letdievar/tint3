@@ -1,13 +1,13 @@
 #include <unistd.h>
 
-#include "Controller/DisplayCtrl.h"
+#include "Model/Display.h"
 
 int main()
 {
 	std::string empty_string ("");
 
 	// Open display
-	Controller::DisplayCtrl * d  = new Controller::DisplayCtrl(empty_string);
+	Model::CDisplay * d = new Model::CDisplay(empty_string);
 	
 	// Create the window
 	Window w = XCreateWindow(

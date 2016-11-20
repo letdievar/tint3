@@ -18,9 +18,9 @@ namespace Model
 			CDisplay( std::string name );
 			~CDisplay( );
 
-			operator Display *();
+			Display * getDisplay();
 			int getDisplayWidth();
-	}
+	};
 }
 
 #endif
