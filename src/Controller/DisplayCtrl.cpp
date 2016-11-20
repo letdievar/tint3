@@ -3,6 +3,9 @@
 
 using namespace Controller;
 
+/**
+ * DisplayCtrl Constructor
+ */
 DisplayCtrl::DisplayCtrl()
 {
 	std::string empty_string ("");
@@ -11,6 +14,9 @@ DisplayCtrl::DisplayCtrl()
 	_cdisplay = new Model::CDisplay(empty_string);
 }
 
+/**
+ * DisplayCtrl Destructor
+ */
 DisplayCtrl::~DisplayCtrl() 
 {
 	if (this->_cdisplay) {
@@ -19,6 +25,10 @@ DisplayCtrl::~DisplayCtrl()
 	}
 }
 
+/**
+ * DisplayCtrl::GetCDisplay()
+ * Returns Model::CDisplay *
+ */
 Model::CDisplay * DisplayCtrl::GetCDisplay()
 {
 	return _cdisplay;

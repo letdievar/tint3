@@ -5,15 +5,25 @@
 
 using namespace View;
 
+/**
+ * MainView Constructor
+ */
 MainView::MainView()
 {
 	_displayCtrl = new Controller::DisplayCtrl();
 }
 
+/**
+ * MainView Destructor
+ */
 MainView::~MainView()
 {
 }
 
+/**
+ * MainView::CreateWindow()
+ * Creates the main window
+ */
 void MainView::CreateWindow() 
 {
 
@@ -29,6 +39,11 @@ void MainView::CreateWindow()
 			0, 0);
 }
 
+/**
+ * MainView::ShowWindow()
+ * Shows the main window
+ * TODO: Not use sleep, but repaint(?) in a thread
+ */
 void MainView::ShowWindow()
 {
 	Display * d = _displayCtrl->GetCDisplay()->GetDisplay();
