@@ -1,1 +1,1 @@
-flags = "-I/home/degva/git/tint3/include/Model -I/home/degva/git/tint3/include -I/home/degva/git/tint3/include/View -I/home/degva/git/tint3/include/Controller -I/usr/include/X11"
+flags = "-I/home/degva/git/tint3/include/Model -I/home/degva/git/tint3/include -I/home/degva/git/tint3/include/View -I/home/degva/git/tint3/include/Controller -I/usr/include/X11 -I/usr/include/cairo"

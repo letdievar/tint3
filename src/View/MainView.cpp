@@ -31,12 +31,23 @@ void MainView::CreateWindow()
 	Display * d = cd->GetDisplay();
 	int display_width = cd->GetDisplayWidth();
 
+	// Create the window borders
+	int blackColor = XBlackPixel(d, XDefaultScreen(d));
+	int whiteColor = XWhitePixel(d, XDefaultScreen(d));
+
+	/*
 	_mainWindow = XCreateWindow(
-			d, 
-			DefaultRootWindow(d),
-			0, 0, display_width, 20, 0,
+			d, DefaultRootWindow(d), 0, 0, display_width, 20,
+			0,
 			CopyFromParent, CopyFromParent, CopyFromParent,
 			0, 0);
+	*/
+	_mainWindow = XCreateSimpleWindow(
+			d, DefaultRootWindow(d), 
+			0, 0, 
+			display_width, 24, 
+			0, blackColor, blackColor);
+			
 }
 
 /**
