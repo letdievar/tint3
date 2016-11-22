@@ -11,6 +11,7 @@ namespace Model
 	{
 		private:
 			Display * _display;
+			int _default_screen;
 			int _display_width;
 			int _display_height;
 
