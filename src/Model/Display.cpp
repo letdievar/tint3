@@ -9,6 +9,8 @@ CDisplay::CDisplay( std::string name )
 {
 	this->_display = XOpenDisplay( name.c_str() );
 
+	this->_default_screen = XDefaultScreen(this->_display);
+
 	// There should be a way to get the actual screen_number
 	this->_display_width = XDisplayWidth(this->_display, 0);
 	this->_display_height = XDisplayHeight(this->_display, 0);
